@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+	<meta charset="utf-8">
+	<title>Sunny个人主页</title>
+	<link rel="icon" href="assets/image/icon.png">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://unpkg.com/layui@2.9.8/dist/css/layui.css" rel="stylesheet" type="text/css">
+	<link href="assets/style/admin.css" rel="stylesheet" type="text/css">
+</head>
+
+<body class="layui-layout-body">
+	<div class="layui-layout layui-layout-admin">
+		<div class="layui-header">
+			<div class="layui-logo">
+				<img src="assets/image/icon.png">
+				<cite>&nbsp;Sunny个人主页</cite>
+			</div>
+			<ul class="layui-nav layui-layout-left">
+				<li class="layui-nav-item" lay-unselect>
+					<a ew-event="flexible"><i class="layui-icon layui-icon-shrink-right"></i></a>
+				</li>
+				<li class="layui-nav-item" lay-unselect>
+					<a ew-event="refresh"><i class="layui-icon layui-icon-refresh-3"></i></a>
+				</li>
+			</ul>
+			<ul class="layui-nav layui-layout-right">
+				<li class="layui-nav-item" lay-unselect>
+					<a ew-event="note"><i class="layui-icon layui-icon-note"></i></a>
+				</li>
+				<li class="layui-nav-item layui-hide-xs" lay-unselect>
+					<a ew-event="fullScreen"><i class="layui-icon layui-icon-screen-full"></i></a>
+				</li>
+				<li class="layui-nav-item" lay-unselect>
+					<a ew-event="theme"><i class="layui-icon layui-icon-theme"></i></a>
+				</li>
+				<li class="layui-nav-item" lay-unselect>
+					<a onclick="window.print()"><i class="layui-icon layui-icon-print"></i></a>
+				</li>
+			</ul>
+		</div>
+		<div class="layui-side">
+			<div class="layui-side-scroll">
+				<ul class="layui-nav layui-nav-tree arrow2" lay-filter="admin-side-nav" lay-shrink="_all">
+					<li class="layui-nav-item">
+						<a lay-href="home.html">
+							<i class="layui-icon layui-icon-home"></i>&emsp;<cite>首页</cite>
+						</a>
+					</li>
+					<li class="layui-nav-item">
+						<a href="https://support.qq.com/product/286996" target="_blank">
+							<i class="layui-icon layui-icon-release"></i>&emsp;<cite>Sunny发布</cite>
+						</a>
+					</li>
+					<li class="layui-nav-item">
+						<a lay-href="pay.html">
+							<i class="layui-icon layui-icon-gift"></i>&emsp;<cite>捐赠</cite>
+						</a>
+					</li>
+					<li class="layui-nav-item">
+						<a>
+							<i class="layui-icon layui-icon-flag"></i>&emsp;<cite>海纳思系统</cite></a>
+						<dl class="layui-nav-child">
+							<dd>
+								<a href="https://qd.sunnyhmz.top:8888" target="_blank">QD框架</a>
+							</dd>
+							<dd>
+								<a href="https://1panel.sunnyhmz.top:8888" target="_blank">1Panel</a>
+							</dd>
+						</dl>
+					</li>
+					<hr>
+					<li class="layui-nav-item">
+						<a href="https://www.iplaysoft.com" target="_blank">
+							<i class="layui-icon layui-icon-find-fill"></i>&emsp;<cite>异次元软件世界</cite>
+						</a>
+					</li>
+					<li class="layui-nav-item">
+						<a href="https://s.17iu8.com" target="_blank">
+							<i class="layui-icon layui-icon-chart-screen"></i>&emsp;<cite>现场大屏幕系统</cite>
+						</a>
+					</li>
+					<li class="layui-nav-item">
+						<a href="https://greasyfork.org/zh-CN" target="_blank">
+							<i class="layui-icon layui-icon-engine"></i>&emsp;<cite>Greasy Fork</cite>
+						</a>
+					</li>
+					<li class="layui-nav-item">
+						<a href="https://zoom.earth" target="_blank">
+							<i class="layui-icon layui-icon-water"></i>&emsp;<cite>Zoom Earth</cite>
+						</a>
+					</li>
+					<li class="layui-nav-item">
+						<a href="https://3d-app.yunser.com/earth" target="_blank">
+							<i class="layui-icon layui-icon-circle-dot"></i>&emsp;<cite>地球模型</cite>
+						</a>
+					</li>
+					<li class="layui-nav-item">
+						<a lay-href="https://graph.baidu.com/pcpage/index?tpl_from=pc">
+							<i class="layui-icon layui-icon-about"></i>&emsp;<cite>百度识图查询结果</cite>
+						</a>
+					</li>
+					<li class="layui-nav-item">
+						<a href="https://iclasscloud.cretech.cn/livecloudm/lib/weiceone.html?company_id=30404" target="_blank">
+							<i class="layui-icon layui-icon-video"></i>&emsp;<cite>广州市第七中学媒体发布</cite>
+						</a>
+					</li>
+					<li class="layui-nav-item">
+						<a href="https://support.weixin.qq.com/cgi-bin/mmsupport-bin/readtemplate?t=page/android_exp__index" target="_blank">
+							<i class="layui-icon layui-icon-key"></i>&emsp;<cite>微信内测</cite>
+						</a>
+					</li>
+					<li class="layui-nav-item">
+						<a href="https://layui.dev/docs" target="_blank">
+							<i class="layui-icon layui-icon-question"></i>&emsp;<cite>Layui文档</cite>
+						</a>
+					</li>
+					<li class="layui-nav-item">
+						<a href="https://apkcombo.com/zh" target="_blank">
+							<i class="layui-icon layui-icon-app"></i>&emsp;<cite>APKCombo</cite>
+						</a>
+					</li>
+					<li class="layui-nav-item">
+						<a href="https://petalmaps.ip6.plus" target="_blank">
+							<i class="layui-icon layui-icon-location"></i>&emsp;<cite>Petalmaps Apk Download</cite>
+						</a>
+					</li>
+					<li class="layui-nav-item">
+						<a href="http://gzqzhjj.ysepan.com" target="_blank">
+							<i class="layui-icon layui-icon-windows"></i>&emsp;<cite>黄老师的网盘</cite>
+						</a>
+					</li>
+					<li class="layui-nav-item">
+						<a>
+							<i class="layui-icon layui-icon-util"></i>&emsp;<cite>工具</cite></a>
+						<dl class="layui-nav-child">
+							<dd>
+								<a href="https://www.alltoall.net" target="_blank">Webhook.site</a>
+							</dd>
+							<dd>
+								<a href="https://webhook.site" target="_blank">ALL TO ALL在线格式转换</a>
+							</dd>
+							<dd>
+								<a href="https://www.geogebra.org/calculator" target="_blank">GeoGebra</a>
+							</dd>
+							<dd>
+								<a href="https://it-tools.haokudelei.com" target="_blank">IT-Tools</a>
+							</dd>
+							<dd>
+								<a href="https://mail.tm/zh" target="_blank">Temp Mail</a>
+							</dd>
+							<dd>
+								<a href="http://ip111.cn" target="_blank">显示查询自己的IP地址</a>
+							</dd>
+							<dd>
+								<a href="https://ipcheck.ing" target="_blank">查看我的IP地址</a>
+							</dd>
+							<dd>
+								<a href="https://jaywcjlove.gitee.io/linux-command" target="_blank">Linux命令搜索引擎</a>
+							</dd>
+							<dd>
+								<a href="https://www.w3school.com.cn/tiy/t.asp?f=eg_html_intro" target="_blank">W3School TIY Editor</a>
+							</dd>
+							<dd>
+								<a href="https://snapdrop.net" target="_blank">Snapdrop</a>
+							</dd>
+							<dd>
+								<a href="https://www.random.org" target="_blank">RANDOM.ORG</a>
+							</dd>
+						</dl>
+					</li>
+					<li class="layui-nav-item">
+						<a>
+							<i class="layui-icon layui-icon-face-smile-b"></i>&emsp;<cite>娱乐</cite></a>
+						<dl class="layui-nav-child">
+							<dd>
+								<a href="https://tuxun.fun" target="_blank">图寻</a>
+							</dd>
+							<dd>
+								<a href="https://florr.io" target="_blank">florr.io</a>
+							</dd>
+							<dd>
+								<a href="https://www.xdgame.com" target="_blank">XDGAME</a>
+							</dd>
+							<dd>
+								<a href="https://mikanime.tv" target="_blank">蜜柑计划</a>
+							</dd>
+							<dd>
+								<a href="https://freeip.cc" target="_blank">雪糕加速IP</a>
+							</dd>
+							<dd>
+								<a href="https://zh-cn.namemc.com" target="_blank">NameMC</a>
+							</dd>
+						</dl>
+					</li>
+					<li class="layui-nav-item">
+						<a>
+							<i class="layui-icon layui-icon-username"></i>&emsp;<cite>工作台</cite></a>
+						<dl class="layui-nav-child">
+							<dd>
+								<a href="http://bot.lerio.cn" target="_blank">乐悠SuperPlus用户中心</a>
+							</dd>
+							<dd>
+								<a href="https://officeweb365.com/StaticHtml/index.html" target="_blank">OfficeWeb365</a>
+							</dd>
+							<dd>
+								<a href="https://home.console.aliyun.com" target="_blank">阿里云控制台首页</a>
+							</dd>
+							<dd>
+								<a href="https://gitee.com/sunnyhmz" target="_blank">好名字</a>
+							</dd>
+							<dd>
+								<a href="https://factory.methodot.com" target="_blank">Methodot</a>
+							</dd>
+							<dd>
+								<a href="https://github.com/sunnyhmz7010" target="_blank">sunnyhmz7010</a>
+							</dd>
+							<dd>
+								<a href="https://console.jiaoyanyun.com" target="_blank">教研云工作台</a>
+							</dd>
+							<dd>
+								<a href="https://lightly.teamcode.com/dashboard" target="_blank">Lightly</a>
+							</dd>
+						</dl>
+					</li>
+					<li class="layui-nav-item">
+						<a>
+							<i class="layui-icon layui-icon-user"></i>&emsp;<cite>论坛</cite></a>
+						<dl class="layui-nav-child">
+							<dd>
+								<a href="https://bbs.binmt.cc" target="_blank">MT论坛</a>
+							</dd>
+							<dd>
+								<a href="https://www.52pojie.cn" target="_blank">吾爱破解</a>
+							</dd>
+							<dd>
+								<a href="https://www.smzdm.com" target="_blank">什么值得买</a>
+							</dd>
+							<dd>
+								<a href="https://www.right.com.cn" target="_blank">恩山无线论坛</a>
+							</dd>
+						</dl>
+					</li>
+					<li class="layui-nav-item">
+						<a>
+							<i class="layui-icon layui-icon-dialogue"></i>&emsp;<cite>AI</cite></a>
+						<dl class="layui-nav-child">
+							<dd>
+								<a href="http://ai.xiabb.chat" target="_blank">阿水AI6.0</a>
+							</dd>
+							<dd>
+								<a href="https://chatgptplus.cn" target="_blank">RawChat公益站点</a>
+							</dd>
+							<dd>
+								<a href="https://www.bing.com/search?q=Bing+AI&showconv=1&FORM=hpcodx" target="_blank">配备GPT-4的必应聊天</a>
+							</dd>
+						</dl>
+					</li>
+					<li class="layui-nav-item">
+						<a>
+							<i class="layui-icon layui-icon-download-circle"></i>&emsp;<cite>解析</cite></a>
+						<dl class="layui-nav-child">
+							<dd>
+								<a href="https://189.ly93.cc" target="_blank">天翼云盘解析</a>
+							</dd>
+							<dd>
+								<a href="https://ctfile.glitch.qinlili.bid/button.html" target="_blank">城通网盘解析器</a>
+							</dd>
+							<dd>
+								<a href="https://zhouql.vip/bilibili" target="_blank">B站视频下载工具</a>
+							</dd>
+						</dl>
+					</li>
+					<li class="layui-nav-item">
+						<a>
+							<i class="layui-icon layui-icon-email"></i>&emsp;<cite>云短信</cite></a>
+						<dl class="layui-nav-child">
+							<dd>
+								<a href="https://www.zusms.com" target="_blank">有信云短信</a>
+							</dd>
+							<dd>
+								<a href="https://sms24.me/en" target="_blank">SMS24.me</a>
+							</dd>
+						</dl>
+					</li>
+					<li class="layui-nav-item">
+						<a>
+							<i class="layui-icon layui-icon-wifi"></i>&emsp;<cite>电信宽带</cite></a>
+						<dl class="layui-nav-child">
+							<dd>
+								<a href="http://192.168.1.1" target="_blank">中国电信智能网关</a>
+							</dd>
+							<dd>
+								<a href="http://192.168.2.1" target="_blank">WiFi6</a>
+							</dd>
+						</dl>
+					</li>
+					<li class="layui-nav-item">
+						<a lay-tips="jm666">
+							<i class="layui-icon layui-icon-android"></i>&emsp;<cite>瑾陌</cite></a>
+						<dl class="layui-nav-child">
+							<dd>
+								<a lay-href="https://jmpj.lanzoux.com/s/jmapp">【瑾陌网盘｜JMAPP.CN｜瑾陌安卓破解应用程序APP网盘】</a>
+							</dd>
+							<dd>
+								<a lay-href="https://jmpj.lanzoux.com/s/jinmo">【瑾陌｜JMAPP.CN｜高级群尊享资源】</a>
+							</dd>
+						</dl>
+					</li>
+					<li class="layui-nav-item">
+						<a>
+							<i class="layui-icon layui-icon-link"></i>&emsp;<cite>其他</cite></a>
+						<dl class="layui-nav-child">
+							<dd>
+								<a href="https://jc.pep.com.cn" target="_blank">中小学教材电子版</a>
+							</dd>
+							<dd>
+								<a href="http://ai2.gzjkw.net" target="_blank">GZ App Inventor</a>
+							</dd>
+							<dd>
+								<a href="https://pg.eeagd.edu.cn/ks" target="_blank">高考报名</a>
+							</dd>
+							<dd>
+								<a href="https://gaokao.chsi.com.cn" target="_blank">阳光高考_教育部高校招生阳光工程指定平台</a>
+							</dd>
+							<dd>
+								<a href="https://www.zxx.edu.cn" target="_blank">国家中小学智慧教育平台</a>
+							</dd>
+							<dd>
+								<a href="https://czzp.gdedu.gov.cn/czzhszpj" target="_blank">广东省初中学生综合素质评价信息管理系统</a>
+							</dd>
+							<dd>
+								<a href="https://gzzp.gdedu.gov.cn/gzzhszpj" target="_blank">广东省普通高中学生综合素质评价信息管理系统</a>
+							</dd>
+							<dd>
+								<a href="https://www.cnipa.gov.cn" target="_blank">国家知识产权局</a>
+							</dd>
+							<dd>
+								<a href="https://jwxk.miit.gov.cn/internetService/MobilePictureQuery" target="_blank">电信设备进网许可</a>
+							</dd>
+							<dd>
+								<a href="https://livechina.cctv.com" target="_blank">实景中国_直播中国_央视网(cctv.com)</a>
+							</dd>
+							<dd>
+								<a href="https://www.gsxt.gov.cn" target="_blank">国家企业信用信息公示系统</a>
+							</dd>
+							<dd>
+								<a href="https://le.ouchn.cn" target="_blank">首页 | 终身教育平台</a>
+							</dd>
+							<dd>
+								<a href="https://yhssglxt.miit.gov.cn" target="_blank">申诉首页</a>
+							</dd>
+							<dd>
+								<a href="http://www.mvyxws.com" target="_blank">医学微视</a>
+							</dd>
+							<dd>
+								<a href="http://pmtkcde.org.cn" target="_blank">重要概念范畴表述外译发布平台</a>
+							</dd>
+							<dd>
+								<a href="https://www.spb.gov.cn" target="_blank">中华人民共和国国家邮政局</a>
+							</dd>
+							<dd>
+								<a href="http://www.docuchina.cn" target="_blank">中国纪录片网</a>
+							</dd>
+							<dd>
+								<a href="https://wenshu.court.gov.cn" target="_blank">中国裁判文书网</a>
+							</dd>
+							<dd>
+								<a href="http://bzdt.ch.mnr.gov.cn" target="_blank">标准地图服务系统</a>
+							</dd>
+							<dd>
+								<a href="https://cont.12315.cn" target="_blank">合同示范文本库</a>
+							</dd>
+							<dd>
+								<a href="https://flk.npc.gov.cn" target="_blank">国家法律法规数据库</a>
+							</dd>
+							<dd>
+								<a href="https://www.chinacourt.org" target="_blank">中国法院网</a>
+							</dd>
+							<dd>
+								<a href="https://www.ncpssd.cn" target="_blank">国家哲学社会科学文献中心</a>
+							</dd>
+							<dd>
+								<a href="https://sswz.spb.gov.cn" target="_blank">邮政业申诉服务平台</a>
+							</dd>
+							<dd>
+								<a href="https://www.dayi.org.cn" target="_blank">中国医药信息查询平台</a>
+							</dd>
+						</dl>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="layui-body"></div>
+	</div>
+	<div class="page-loading">
+		<div class="ball-loader">
+			<span></span><span></span><span></span><span></span>
+		</div>
+	</div>
+	<script type="text/javascript" src="https://unpkg.com/layui@2.9.8/dist/layui.js"></script>
+	<script>
+		layui.config({
+    base: getProjectUrl() + 'assets/js/'
+})
+    .use(['layer', 'admin'], function () {
+        var $ = layui.jquery;
+        var layer = layui.layer;
+        var admin = layui.admin
+    });
+
+function getProjectUrl() {
+    var layuiDir = layui.cache.dir;
+    if (!layuiDir) {
+        var js = document.scripts,
+            last = js.length - 1,
+            src;
+        for (var i = last; i > 0; i--) {
+            if (js[i].readyState === 'interactive') {
+                src = js[i].src;
+                break
+            }
+        }
+        var jsPath = src || js[last].src;
+        layuiDir = jsPath.substring(0, jsPath.lastIndexOf('/') + 1)
+    }
+    return layuiDir.substring(0, layuiDir.indexOf('assets'))
+}
+
+layui.use(['index'], function () {
+    var $ = layui.jquery;
+    var index = layui.index;
+    index.loadHome({
+        menuPath: 'home.html',
+        menuName: '<i class="layui-icon layui-icon-home"></i>'
+    })
+});
+	</script>
+</body>
+
+</html>

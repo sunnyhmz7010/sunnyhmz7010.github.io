@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        html {
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+        *, *:before, *:after {
+            box-sizing: inherit;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .media-list {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 20px;
+        }
+        .media-list li {
+            cursor: pointer;
+            padding: 10px 15px;
+            margin-bottom: 8px;
+            background-color: #ddd;
+            border-radius: 4px;
+            transition: background-color 0.2s ease;
+        }
+        .media-list li:hover {
+            background-color: #ccc;
+        }
+        .media-display img,
+        .media-display video {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+            border-radius: 4px;
+        }
+        .toggle-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 10px 15px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+            outline: none;
+            z-index: 1000; /* Ensure the button is always on top */
+        }
+        .toggle-btn:hover {
+            background-color: #0056b3;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    
+    <button class="toggle-btn" onclick="toggleVisibility()">Switch</button>
+    
+    <div class="container" id="mainContainer">
+        <ul class="media-list" id="mediaList">
+            <!-- Media items will be listed here -->
+        </ul>
+        <div id="videoDisplay" class="media-display">
+            <!-- Videos will play here -->
+        </div>
+        <div id="imageDisplay" class="media-display">
+            <!-- Images will display here -->
+        </div>
+    </div>
+
+    <script>
+        const mediaItems = [
+            { type: 'video', title: 'nv1', fileName: 'nv1.mp4' },
+            { type: 'video', title: 'nv2', fileName: 'nv2.mp4' },
+            { type: 'video', title: 'nv3', fileName: 'nv3.mp4' },
+            { type: 'video', title: 'nv4', fileName: 'nv4.mp4' },
+            { type: 'video', title: 'nv5', fileName: 'nv5.mp4' },
+            { type: 'image', title: 'n1', fileName: 'n1.jpg' },
+            { type: 'image', title: 'n2', fileName: 'n2.jpg' },
+            // Additional media items...
+        ];
+
+        const mediaList = document.getElementById('mediaList');
+        const mainContainer = document.getElementById('mainContainer');
+
+        function displayMedia(item) {
+            if(item.type === 'video') {
+                displayVideo(item.fileName);
+            } else if(item.type === 'image') {
+                displayImage(item.fileName);
+            }
+        }
+
+        function displayVideo(fileName) {
+            const videoDisplay = document.getElementById('videoDisplay');
+            videoDisplay.innerHTML = '<video controls autoplay><source src="' + fileName + '" type="video/mp4">Your browser does not support HTML5 video.</video>';
+        }
+
+        function displayImage(fileName) {
+            const imageDisplay = document.getElementById('imageDisplay');
+            imageDisplay.innerHTML = '<img src="' + fileName + '" alt="Image">';
+        }
+
+        mediaItems.forEach((item, index) => {
+            let listItem = document.createElement('li');
+            listItem.textContent = item.title;
+            listItem.onclick = function() { displayMedia(item); };
+            mediaList.appendChild(listItem);
+        });
+
+        function toggleVisibility() {
+            mainContainer.classList.toggle('hidden');
+        }
+    </script>
+</body>
+</html>
